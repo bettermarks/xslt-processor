@@ -1030,7 +1030,9 @@ let toString = function(expr) {
 
 // Copyright 2018 Johannes Wilm
 
-function xpathParse(expr) {
+function xpathParse(expr, xpathLog) {
+    xpathLog = xpathLog || function(message) {};
+
     xpathLog(`parse ${expr}`);
     xpathParseInit(xpathLog);
 

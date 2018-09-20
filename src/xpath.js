@@ -65,7 +65,9 @@ import {
     toString
 } from "./xpathdebug.js"
 
-export function xpathParse(expr) {
+export function xpathParse(expr, xpathLog) {
+    xpathLog = xpathLog || function(message) {};
+
     xpathLog(`parse ${expr}`);
     xpathParseInit(xpathLog);
 
